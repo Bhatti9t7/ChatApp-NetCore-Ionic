@@ -1,0 +1,9 @@
+<ion-item (click)="addContact()" *ngIf="user" >
+  <ion-avatar slot="start">
+    <img [src]="user.image">
+  </ion-avatar>
+  <ion-label>
+    <h2>{{ user.name }}</h2>
+    <p>Tap to add in contact</p>
+  </ion-label>
+</ion-item>

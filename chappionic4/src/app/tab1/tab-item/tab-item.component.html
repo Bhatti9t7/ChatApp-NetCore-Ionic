@@ -1,0 +1,10 @@
+<ion-item (click)="showConversationPage()" *ngIf="contactUser">
+  <ion-avatar slot="start">
+    <img [src]="'https://ui-avatars.com/api/?name='+contactUser.name">
+  </ion-avatar>
+  <ion-label>
+    <h2>{{ contactUser.name }}</h2>
+    <p *ngIf="lastMessage">{{ lastMessage.message }}</p>
+    <p item-end class="text-ellipsis" *ngIf="lastMessage">{{ lastMessage.date| date:"HH:mm" }}</p>
+  </ion-label>
+</ion-item>

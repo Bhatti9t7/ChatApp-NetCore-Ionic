@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-row>
+      <ion-title>
+        Contacts
+      </ion-title>
+      <ion-button end (click)="onAddContact()">
+        <ion-icon mode="ios" name="add" class="text-white"></ion-icon>
+      </ion-button>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+
+  <ion-list lines="none" class="app-list">
+    <app-tab2-item *ngFor="let contact of contactsList" [contact]="contact" [currentUser]="currentUser"></app-tab2-item>
+  </ion-list>
+
+</ion-content>

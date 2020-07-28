@@ -1,0 +1,9 @@
+<ion-item (click)="showConversationPage()" *ngIf="contactUserObj" >
+  <ion-avatar slot="start">
+    <img [src]="contactUserObj.image">
+  </ion-avatar>
+  <ion-label>
+    <h2>{{ contactUserObj.name }}</h2>
+    <p>{{ contactUserObj.description }}</p>
+  </ion-label>
+</ion-item>
